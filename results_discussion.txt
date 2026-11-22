@@ -1,0 +1,13 @@
+Kolkata district, 2020: annual mean tropospheric NO₂ was 0.00008349 mol/m².
+The within-district 75th-percentile threshold was 0.00008690 mol/m².
+Approximately 177,843 of 821,208 estimated women aged 15–49
+(21.66%) resided in cells assigned to the relatively high-NO₂ class.
+The greatest monthly district mean was January (0.00012802 mol/m²);
+the lowest was July (0.00003866 mol/m²).
+NO₂ coverage encompassed cells containing 100.00% of the WorldPop group.
+These patterns describe satellite column observations and estimated residential location;
+they do not establish individual exposure, ground-level pollution, health effects,
+or causal drivers of month-to-month change. Sentinel-5P's approximately 1.1 km grid
+is much coarser than WorldPop's approximately 100 m grid, so within-pixel differences
+cannot be resolved. Weather, cloud filtering, data gaps and 2020 conditions affect
+the estimates. FAO GAUL district boundaries may differ from municipal boundaries.

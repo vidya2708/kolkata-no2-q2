@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kolkata NO₂ and women aged 15–49, 2020 | Q2</title>
+<style>
+body{font:16px/1.65 system-ui,Arial,sans-serif;color:#1d2f40;background:#f3f6f9;margin:0}
+main{max-width:960px;margin:auto;padding:24px 18px 60px}
+section{background:#fff;border-radius:12px;padding:20px 24px;margin:18px 0;box-shadow:0 2px 10px #0001}
+h1{font-size:1.7rem;line-height:1.25;margin:.2em 0}h2{font-size:1.25rem;margin:.1em 0 .6em;color:#17365d}
+img{max-width:100%;height:auto;border:1px solid #d5dde4;border-radius:8px}
+figure{margin:14px 0;text-align:center}figcaption{font-size:.9rem;color:#52606d;margin-top:6px}
+table{width:100%;border-collapse:collapse}th,td{padding:8px 10px;border-bottom:1px solid #dde5ec;text-align:left}th{width:60%;font-weight:600}
+.note{background:#fff7e0;border-left:4px solid #e0a800;padding:10px 14px;border-radius:6px;font-size:.95rem}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+a{color:#0a5c8f}code{background:#eef2f5;padding:1px 5px;border-radius:4px}
+</style></head><body><main>
+
+<h1>Kolkata: satellite NO₂ and where women aged 15–49 live, 2020</h1>
+<p>Individual Google Earth Engine urban analysis (Question 2, Test 2) · <b>YOUR NAME</b> · Roll No. <b>HS25M114</b></p>
+
+<section><h2>1. Question</h2>
+<p>What share of women aged 15–49 live in the highest quartile of satellite-observed annual tropospheric NO₂ within the Kolkata study boundary?</p>
+<p class="note"><b>Answer:</b> about <b>177,843 of 821,208</b> estimated women aged 15–49 (<b>21.66%</b>) reside in areas with relatively high satellite-observed NO₂ columns in 2020.</p></section>
+
+<section><h2>2. Data and method</h2><ul>
+<li><b>Boundary:</b> FAO GAUL 2015 level-2 (ADM2) polygon for Kolkata, West Bengal, via Earth Engine (<code>FAO/GAUL/2015/level2</code>), area 91.8 km². This is a district polygon and can differ from the Kolkata Municipal Corporation boundary; it defines the denominator for every number on this page.</li>
+<li><b>NO₂:</b> Sentinel-5P OFFL L3 tropospheric NO₂ column density (<code>COPERNICUS/S5P/OFFL/L3_NO2</code>), 1 Jan–31 Dec 2020, images with cloud fraction &gt; 0.30 masked, then averaged. Analysis scale about 1.1 km.</li>
+<li><b>High NO₂:</b> pixels at or above the district's own 75th percentile of the annual mean (8.69×10⁻⁵ mol/m²). This is a city-specific relative rule, not a health standard.</li>
+<li><b>Population:</b> WorldPop 2020 age–sex (<code>WorldPop/GP/100m/pop_age_sex</code>), female bands F_15 to F_45 summed (ages 15–49), about 100 m cells. The coarse NO₂ class is assigned to each WorldPop cell by nearest neighbour.</li>
+<li><b>Share</b> = women in high-NO₂ cells ÷ all women aged 15–49 in the district.</li></ul></section>
+
+<section><h2>3. Maps</h2>
+<figure><img src="annual_map_2020.png" alt="Map of annual mean tropospheric NO2 over Kolkata in 2020">
+<figcaption>Figure 1. Annual mean tropospheric NO₂ column, 2020 (mol/m²), colour scale 0 to 2×10⁻⁴.</figcaption></figure>
+<figure><img src="women_high_no2_map_2020.png" alt="Map of women aged 15 to 49 living in high NO2 cells in Kolkata">
+<figcaption>Figure 2. Estimated women aged 15–49 per ~100 m cell, shown only where NO₂ is in the top quartile. Grey means outside the high class, not an empty area.</figcaption></figure></section>
+
+<section><h2>4. Dynamic output: monthly NO₂ animation</h2>
+<figure><img src="kolkata_monthly_no2_2020.gif" alt="Animated GIF of monthly mean NO2 over Kolkata, January to December 2020">
+<figcaption>Figure 3. Animated monthly mean NO₂, January–December 2020. Every frame uses the same colour scale (legend printed in each frame).</figcaption></figure>
+<p><a href="kolkata_monthly_no2_2020.gif">Open the GIF in its own tab</a></p>
+<h3 style="margin-bottom:.2em">Monthly district mean</h3><svg viewBox="0 0 640 300" role="img" aria-label="Bar chart of monthly mean NO2 in Kolkata 2020" style="width:100%;height:auto"><line x1="50" x2="630" y1="260.0" y2="260.0" stroke="#e3e8ec"/><text x="44" y="264.0" font-size="10" text-anchor="end">0</text><line x1="50" x2="630" y1="191.4" y2="191.4" stroke="#e3e8ec"/><text x="44" y="195.4" font-size="10" text-anchor="end">4</text><line x1="50" x2="630" y1="122.9" y2="122.9" stroke="#e3e8ec"/><text x="44" y="126.9" font-size="10" text-anchor="end">8</text><line x1="50" x2="630" y1="54.3" y2="54.3" stroke="#e3e8ec"/><text x="44" y="58.3" font-size="10" text-anchor="end">12</text><rect x="56.0" y="40.6" width="36.3" height="219.4" fill="#c0392b"/><text x="74.2" y="36.6" font-size="10" text-anchor="middle">12.8</text><text x="74.2" y="275" font-size="11" text-anchor="middle">Jan</text><rect x="104.3" y="66.3" width="36.3" height="193.7" fill="#7fb3d5"/><text x="122.5" y="62.3" font-size="10" text-anchor="middle">11.3</text><text x="122.5" y="275" font-size="11" text-anchor="middle">Feb</text><rect x="152.7" y="136.6" width="36.3" height="123.4" fill="#7fb3d5"/><text x="170.8" y="132.6" font-size="10" text-anchor="middle">7.2</text><text x="170.8" y="275" font-size="11" text-anchor="middle">Mar</text><rect x="201.0" y="170.9" width="36.3" height="89.1" fill="#7fb3d5"/><text x="219.2" y="166.9" font-size="10" text-anchor="middle">5.2</text><text x="219.2" y="275" font-size="11" text-anchor="middle">Apr</text><rect x="249.3" y="181.1" width="36.3" height="78.9" fill="#7fb3d5"/><text x="267.5" y="177.1" font-size="10" text-anchor="middle">4.6</text><text x="267.5" y="275" font-size="11" text-anchor="middle">May</text><rect x="297.7" y="162.3" width="36.3" height="97.7" fill="#7fb3d5"/><text x="315.8" y="158.3" font-size="10" text-anchor="middle">5.7</text><text x="315.8" y="275" font-size="11" text-anchor="middle">Jun</text><rect x="346.0" y="193.1" width="36.3" height="66.9" fill="#2c7fb8"/><text x="364.2" y="189.1" font-size="10" text-anchor="middle">3.9</text><text x="364.2" y="275" font-size="11" text-anchor="middle">Jul</text><rect x="394.3" y="181.1" width="36.3" height="78.9" fill="#7fb3d5"/><text x="412.5" y="177.1" font-size="10" text-anchor="middle">4.6</text><text x="412.5" y="275" font-size="11" text-anchor="middle">Aug</text><rect x="442.7" y="188.0" width="36.3" height="72.0" fill="#7fb3d5"/><text x="460.8" y="184.0" font-size="10" text-anchor="middle">4.2</text><text x="460.8" y="275" font-size="11" text-anchor="middle">Sep</text><rect x="491.0" y="165.7" width="36.3" height="94.3" fill="#7fb3d5"/><text x="509.2" y="161.7" font-size="10" text-anchor="middle">5.5</text><text x="509.2" y="275" font-size="11" text-anchor="middle">Oct</text><rect x="539.3" y="119.4" width="36.3" height="140.6" fill="#7fb3d5"/><text x="557.5" y="115.4" font-size="10" text-anchor="middle">8.2</text><text x="557.5" y="275" font-size="11" text-anchor="middle">Nov</text><rect x="587.7" y="52.6" width="36.3" height="207.4" fill="#7fb3d5"/><text x="605.8" y="48.6" font-size="10" text-anchor="middle">12.1</text><text x="605.8" y="275" font-size="11" text-anchor="middle">Dec</text><text x="14" y="130.0" font-size="11" transform="rotate(-90 14 130.0)" text-anchor="middle">Mean NO₂ (×10⁻⁵ mol/m²)</text></svg>
+<p style="font-size:.9rem;color:#52606d">Figure 4. District-mean NO₂ by month (red = highest, blue = lowest). Data: <a href="kolkata_monthly_no2_2020.csv">kolkata_monthly_no2_2020.csv</a>.</p></section>
+
+<section><h2>5. Numerical results</h2><table>
+<tr><th>Study area</th><td>FAO GAUL 2015 ADM2 Kolkata district (91.8 km²)</td></tr>
+<tr><th>Annual district mean NO₂</th><td>8.349×10⁻⁵ mol/m²</td></tr>
+<tr><th>High-NO₂ threshold (75th percentile)</th><td>8.690×10⁻⁵ mol/m²</td></tr>
+<tr><th>Women aged 15–49 in district (WorldPop)</th><td>821,208</td></tr>
+<tr><th>Women aged 15–49 in high-NO₂ cells</th><td>177,843</td></tr>
+<tr><th>Share residing in relatively high-NO₂ areas</th><td><b>21.66%</b></td></tr>
+<tr><th>Women with valid annual NO₂ data</th><td>100%</td></tr>
+<tr><th>Highest monthly mean</th><td>January, 12.8×10⁻⁵ mol/m²</td></tr>
+<tr><th>Lowest monthly mean</th><td>July, 3.9×10⁻⁵ mol/m²</td></tr></table>
+<p><a href="kolkata_women_no2_exposure_2020.csv">Download exposure CSV</a> · <a href="results_discussion.txt">results text</a></p></section>
+
+<section><h2>6. Discussion</h2>
+<p><b>Spatial pattern.</b> Annual NO₂ is highest across the central and south-central part of the district and lower toward the northern end and the western tail (Figure 1). The within-district range is narrow, roughly 7×10⁻⁵ to 9×10⁻⁵ mol/m², so the differences are modest. The top-quartile area forms a contiguous block of coarse pixels, and the women living inside it are concentrated in that central-southern block (Figure 2).</p>
+<p><b>Exposure share.</b> The top quartile of pixels contains 21.66% of the district's women aged 15–49. If those pixels cover roughly a quarter of the district, this is slightly below a proportional share, so the highest-NO₂ cells are not simply the most populated ones. The result describes where women reside relative to satellite-observed values; it is not a measure of any person's personal or ground-level exposure.</p>
+<p><b>Temporal pattern.</b> District-mean NO₂ is highest in January (12.8×10⁻⁵) and December (12.1×10⁻⁵) and lowest from July to September (about 4×10⁻⁵) (Figures 3–4). This is the usual winter high and monsoon low for the region; plausible reasons are shallower winter mixing layers and monsoon rain and ventilation, but this analysis does not test causes. The spring decline (March to May 2020) coincides with COVID-19 restrictions, but a single year cannot separate that effect from the normal seasonal fall.</p>
+<p><b>Limitations.</b></p><ul>
+<li><b>Spatial resolution:</b> Sentinel-5P is about 1.1 km, so each pixel spans many WorldPop cells and cannot show street-level differences. The district is only about 92 km², so it contains few NO₂ pixels.</li>
+<li><b>Temporal resolution and gaps:</b> only about one overpass per day, with cloud filtering (&gt; 0.30 removed), which thins out data in the monsoon. Monthly values average different numbers of valid observations.</li>
+<li><b>Column vs surface:</b> tropospheric column density is not ground-level concentration.</li>
+<li><b>Population data:</b> WorldPop values are modelled estimates, not a census count, and show where people live, not where they spend the day.</li>
+<li><b>Boundary:</b> the 2015 GAUL district polygon differs from municipal limits (the dataset has since been superseded by a 2025 version).</li>
+<li><b>Relative threshold:</b> "high" means high compared with the rest of Kolkata in 2020, not above any health guideline.</li>
+<li><b>Single year:</b> 2020 was unusual because of lockdowns, so it may not represent typical conditions.</li></ul></section>
+
+<section><h2>7. Code and sources</h2><ul>
+<li><a href="Kolkata_NO2_Question2_Complete%20(1)test2.ipynb">Notebook (code)</a></li>
+<li><a href="https://developers.google.com/earth-engine/datasets/catalog/FAO_GAUL_2015_level2">FAO GAUL 2015 level 2</a></li>
+<li><a href="https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S5P_OFFL_L3_NO2">Copernicus Sentinel-5P OFFL NO₂</a></li>
+<li><a href="https://developers.google.com/earth-engine/datasets/catalog/WorldPop_GP_100m_pop_age_sex">WorldPop age and sex structure, 2020</a></li></ul></section>
+</main></body></html>
